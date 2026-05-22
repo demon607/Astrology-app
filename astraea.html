@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>AstroCosm — Astraea Chat</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <div class="phone-container">
+
+    <header class="app-header">
+      <div class="app-logo"><span>✨</span> ASTROCOSM</div>
+      <div class="user-quick-profile" id="header-profile-btn">
+        <span id="header-user-sign">♈</span>
+        <span id="header-user-name">User</span>
+      </div>
+    </header>
+
+    <main class="app-content chat-view-container" id="main-content-scroll">
+
+      <div class="chat-history" id="chat-messages-box"></div>
+
+      <div class="chat-suggestions" id="chat-suggestions-box"></div>
+
+      <form class="chat-input-bar" id="chat-form">
+        <input type="text" id="chat-input-field" class="chat-input" placeholder="Ask Astraea about your destiny..." required>
+        <button type="submit" class="chat-send-btn">
+          <svg viewBox="0 0 24 24">
+            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </svg>
+        </button>
+      </form>
+
+    </main>
+
+    <nav class="app-navbar" id="app-navbar"></nav>
+  </div>
+
+  <script src="js/astrology.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/astraea.js"></script>
+</body>
+</html>

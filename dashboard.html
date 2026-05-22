@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>AstroCosm — Horoscope Feed</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <div class="phone-container">
+
+    <header class="app-header">
+      <div class="app-logo"><span>✨</span> ASTROCOSM</div>
+      <div class="user-quick-profile" id="header-profile-btn">
+        <span id="header-user-sign">♈</span>
+        <span id="header-user-name">User</span>
+      </div>
+    </header>
+
+    <main class="app-content" id="main-content-scroll">
+      <section class="app-view active">
+
+        <div class="dashboard-hero">
+          <div class="zodiac-badge-large" id="dash-sign-badge">♈</div>
+          <h2 class="cosmic-title" style="font-size: 1.6rem;" id="dash-user-welcome">Cosmos</h2>
+          <div class="user-astro-summary">
+            <div class="astro-chip">
+              <span class="chip-label">Sun:</span>
+              <span class="chip-value" id="chip-sun">—</span>
+            </div>
+            <div class="astro-chip">
+              <span class="chip-label">Moon:</span>
+              <span class="chip-value" id="chip-moon">—</span>
+            </div>
+            <div class="astro-chip">
+              <span class="chip-label">Rising:</span>
+              <span class="chip-value" id="chip-rising">—</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-container">
+          <button class="tab-btn active" data-period="daily">Daily</button>
+          <button class="tab-btn" data-period="weekly">Weekly</button>
+          <button class="tab-btn" data-period="monthly">Monthly</button>
+        </div>
+
+        <div class="glass-card gold-border horoscope-card">
+          <div class="horoscope-meta">
+            <span class="horoscope-period" id="horo-period-title">Daily Reading</span>
+            <span class="horoscope-date" id="horo-date"></span>
+          </div>
+          <p class="horoscope-text" id="horo-text"></p>
+
+          <div class="horoscope-dimensions">
+            <div class="dimension-row">
+              <span class="dimension-label">❤️ Love</span>
+              <div class="dimension-bar-bg">
+                <div class="dimension-bar-fill" id="bar-love" style="width: 0%;"></div>
+              </div>
+              <span class="dimension-value" id="val-love">0%</span>
+            </div>
+            <div class="dimension-row">
+              <span class="dimension-label">💼 Career</span>
+              <div class="dimension-bar-bg">
+                <div class="dimension-bar-fill" id="bar-career" style="width: 0%;"></div>
+              </div>
+              <span class="dimension-value" id="val-career">0%</span>
+            </div>
+            <div class="dimension-row">
+              <span class="dimension-label">⚡ Wellness</span>
+              <div class="dimension-bar-bg">
+                <div class="dimension-bar-fill" id="bar-health" style="width: 0%;"></div>
+              </div>
+              <span class="dimension-value" id="val-health">0%</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <nav class="app-navbar" id="app-navbar"></nav>
+  </div>
+
+  <script src="js/astrology.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

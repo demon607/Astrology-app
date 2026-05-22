@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>AstroCosm — Profile</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <div class="phone-container">
+
+    <header class="app-header">
+      <div class="app-logo"><span>✨</span> ASTROCOSM</div>
+      <div class="user-quick-profile" id="header-profile-btn">
+        <span id="header-user-sign">♈</span>
+        <span id="header-user-name">User</span>
+      </div>
+    </header>
+
+    <main class="app-content" id="main-content-scroll">
+      <section class="app-view active">
+
+        <div class="dashboard-hero" style="padding-bottom: 5px;">
+          <div class="comp-avatar-circle gold" id="profile-avatar" style="width: 80px; height: 80px; font-size: 2.2rem; margin-bottom: 10px;">♈</div>
+          <h3 class="cosmic-title" style="font-size: 1.5rem;" id="profile-name-title">—</h3>
+          <p class="cosmic-subtitle" style="font-size: 0.8rem; margin-bottom: 10px; padding: 0 10px;" id="profile-birth-summary"></p>
+        </div>
+
+        <div class="glass-card" style="margin-top: 10px; padding: 15px;">
+          <h4 class="cosmic-title" style="font-size: 0.95rem; margin-bottom: 15px; letter-spacing: 1px;">Elemental Balance</h4>
+          <div class="horoscope-dimensions" style="margin-top: 0;" id="profile-elements-box"></div>
+        </div>
+
+        <div class="glass-card" style="margin-top: 10px; padding: 15px;">
+          <h4 class="cosmic-title" style="font-size: 0.95rem; margin-bottom: 15px; letter-spacing: 1px;">Modality Balance</h4>
+          <div class="horoscope-dimensions" style="margin-top: 0;" id="profile-modalities-box"></div>
+        </div>
+
+        <div class="glass-card" style="margin-top: 10px; display: flex; flex-direction: column; gap: 10px; padding: 15px;">
+          <button class="cosmic-button" id="profile-edit-btn" style="margin-top: 0;">Edit Birth Details</button>
+          <button class="cosmic-button" id="profile-clear-btn" style="margin-top: 0; background: transparent; border: 1px solid var(--color-nebula-pink); color: var(--color-nebula-pink); box-shadow: none;">Reset All Data</button>
+        </div>
+
+      </section>
+    </main>
+
+    <nav class="app-navbar" id="app-navbar"></nav>
+  </div>
+
+  <script src="js/astrology.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>
