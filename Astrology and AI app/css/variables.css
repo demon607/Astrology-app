@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Color Palette */
+  --bg-cosmic-dark: #070714;
+  --bg-cosmic-deep: #0b0b26;
+  --bg-cosmic-nebula: radial-gradient(circle at 50% 0%, rgba(138, 43, 226, 0.15) 0%, rgba(0, 0, 50, 0) 70%),
+                        radial-gradient(circle at 100% 100%, rgba(30, 144, 255, 0.12) 0%, rgba(0, 0, 0, 0) 60%);
+  
+  --color-gold-glow: #f3cf7a;
+  --color-gold: #d4af37;
+  --color-gold-dark: #aa8511;
+  --color-nebula-purple: #9c27b0;
+  --color-nebula-violet: #673ab7;
+  --color-nebula-pink: #e91e63;
+  --color-starlight: #eef2f7;
+  --color-starlight-dim: #a6b0c3;
+  --color-cosmic-cyan: #00bcd4;
+  
+  /* Glassmorphism Styles */
+  --glass-bg: rgba(15, 15, 38, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-border-glow: rgba(212, 175, 55, 0.25);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --glass-blur: blur(16px);
+  
+  /* Fonts */
+  --font-display: 'Cinzel', serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  
+  /* Layout Dimensions */
+  --phone-width: 390px;
+  --phone-height: 844px;
+  --header-height: 64px;
+  --nav-height: 72px;
+  
+  /* Transitions */
+  --transition-smooth: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-fast: all 0.15s ease;
+}

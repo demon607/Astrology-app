@@ -1,0 +1,808 @@
+/* Onboarding Screen & Forms */
+.onboarding-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 30px 20px;
+  text-align: center;
+  overflow-y: auto;
+}
+
+.cosmic-title {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: var(--color-starlight);
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.cosmic-subtitle {
+  color: var(--color-starlight-dim);
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-gold-glow);
+  margin-bottom: 8px;
+}
+
+.cosmic-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 14px;
+  color: var(--color-starlight);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+.cosmic-input:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-gold);
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+}
+
+.row-group {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.cosmic-button {
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
+  color: #070714;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 15px;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  transition: var(--transition-smooth);
+}
+
+.cosmic-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+}
+
+.cosmic-button:active {
+  transform: translateY(1px);
+}
+
+/* Horoscope Feed Dashboard */
+.dashboard-hero {
+  padding: 25px 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.zodiac-badge-large {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(103, 58, 183, 0.3) 0%, rgba(7, 7, 20, 0.8) 100%);
+  border: 2px solid var(--color-gold);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: var(--color-gold-glow);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.zodiac-badge-large::after {
+  content: "";
+  position: absolute;
+  top: -6px; left: -6px; right: -6px; bottom: -6px;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  animation: spin 60s infinite linear;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.user-astro-summary {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.astro-chip {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.astro-chip .chip-label {
+  color: var(--color-starlight-dim);
+}
+
+.astro-chip .chip-value {
+  color: var(--color-gold-glow);
+  font-weight: 600;
+}
+
+/* Tabs Switcher */
+.tab-container {
+  display: flex;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  margin: 15px;
+  padding: 4px;
+}
+
+.tab-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--color-starlight-dim);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 10px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.tab-btn.active {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-starlight);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Horoscope Content Cards */
+.horoscope-card {
+  margin-top: 10px;
+}
+
+.horoscope-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: 10px;
+}
+
+.horoscope-period {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--color-gold-glow);
+  letter-spacing: 1px;
+}
+
+.horoscope-date {
+  font-size: 0.75rem;
+  color: var(--color-starlight-dim);
+}
+
+.horoscope-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-starlight);
+  text-align: justify;
+}
+
+.horoscope-dimensions {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.dimension-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dimension-label {
+  width: 70px;
+  font-size: 0.8rem;
+  color: var(--color-starlight-dim);
+  font-weight: 500;
+}
+
+.dimension-bar-bg {
+  flex: 1;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.dimension-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--color-nebula-violet) 0%, var(--color-gold-glow) 100%);
+  width: 0%; /* Animate via JS */
+  transition: width 1s ease-out;
+}
+
+.dimension-value {
+  width: 35px;
+  text-align: right;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-gold-glow);
+}
+
+/* Birth Chart Panel & Wheel SVG */
+.chart-container-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.zodiac-wheel-svg {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  filter: drop-shadow(0 0 15px rgba(103, 58, 183, 0.2));
+}
+
+/* Interactive SVG aspects */
+.wheel-house-line {
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 1;
+}
+
+.wheel-planet-point {
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.wheel-planet-point:hover {
+  filter: drop-shadow(0 0 8px var(--color-gold));
+}
+
+.wheel-aspect-line {
+  stroke-dasharray: 4 2;
+  stroke-width: 1;
+  opacity: 0.45;
+  transition: var(--transition-fast);
+}
+
+.wheel-aspect-line.trine { stroke: var(--color-cosmic-cyan); opacity: 0.75; }
+.wheel-aspect-line.conjunction { stroke: var(--color-gold-glow); opacity: 0.85; }
+.wheel-aspect-line.opposition { stroke: var(--color-nebula-pink); opacity: 0.75; }
+.wheel-aspect-line.square { stroke: #ff9800; opacity: 0.75; }
+.wheel-aspect-line.sextile { stroke: #4caf50; opacity: 0.75; }
+
+.wheel-aspect-line:hover {
+  stroke-width: 2.5;
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Legend details */
+.chart-details-panel {
+  width: 100%;
+}
+
+.chart-section-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--color-starlight);
+  margin: 15px 15px 5px;
+  letter-spacing: 1px;
+}
+
+.placement-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 15px;
+}
+
+.placement-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  padding: 12px 16px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.placement-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.placement-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.planet-symbol {
+  font-size: 1.25rem;
+  color: var(--color-gold-glow);
+  width: 24px;
+  text-align: center;
+}
+
+.planet-name {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.planet-house {
+  font-size: 0.75rem;
+  color: var(--color-starlight-dim);
+}
+
+.placement-item-right {
+  text-align: right;
+}
+
+.sign-name {
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: var(--color-gold-glow);
+}
+
+.sign-degree {
+  font-size: 0.7rem;
+  color: var(--color-starlight-dim);
+}
+
+/* Modal Popup details */
+.cosmic-modal {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(4, 4, 15, 0.85);
+  backdrop-filter: blur(12px);
+  z-index: 100;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: var(--bg-cosmic-deep);
+  border: 1px solid var(--color-gold);
+  border-radius: 24px;
+  width: 100%;
+  max-width: 340px;
+  padding: 25px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  position: relative;
+  text-align: center;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px; right: 15px;
+  background: transparent;
+  border: none;
+  color: var(--color-starlight-dim);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-header-symbol {
+  font-size: 2.5rem;
+  color: var(--color-gold-glow);
+  margin-bottom: 10px;
+}
+
+.modal-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: var(--color-starlight);
+}
+
+.modal-body {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--color-starlight-dim);
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 5px;
+  text-align: justify;
+}
+
+/* Compatibility view */
+.compatibility-screen {
+  overflow-y: auto;
+  height: 100%;
+}
+
+.comp-header {
+  text-align: center;
+  padding: 20px 15px 5px;
+}
+
+.comp-avatars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.comp-avatar-circle {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid var(--glass-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  color: var(--color-starlight);
+}
+
+.comp-avatar-circle.gold {
+  border-color: var(--color-gold);
+  color: var(--color-gold-glow);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+}
+
+.comp-connection-heart {
+  font-size: 1.5rem;
+  color: var(--color-nebula-pink);
+  animation: pulse 1.8s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.2); opacity: 1; filter: drop-shadow(0 0 5px rgba(233, 30, 99, 0.5)); }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
+.comp-score-ring {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 20px;
+}
+
+.svg-ring-circle {
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+.comp-score-text {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.comp-score-percent {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-starlight);
+}
+
+.comp-score-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-starlight-dim);
+}
+
+/* AI Chat Room */
+.chat-view-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-history {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chat-bubble {
+  max-width: 80%;
+  padding: 12px 16px;
+  border-radius: 18px;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  position: relative;
+  animation: messageIn 0.3s ease-out forwards;
+}
+
+@keyframes messageIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.chat-bubble.user {
+  background: var(--color-nebula-violet);
+  color: var(--color-starlight);
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 4px 10px rgba(103, 58, 183, 0.2);
+}
+
+.chat-bubble.ai {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  color: var(--color-starlight);
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.chat-bubble.ai p {
+  margin-bottom: 6px;
+}
+
+.chat-bubble.ai p:last-child {
+  margin-bottom: 0;
+}
+
+.chat-bubble.ai strong {
+  color: var(--color-gold-glow);
+}
+
+.typing-indicator {
+  display: flex;
+  gap: 4px;
+  padding: 10px 15px;
+  align-self: flex-start;
+}
+
+.typing-indicator span {
+  width: 6px;
+  height: 6px;
+  background: var(--color-starlight-dim);
+  border-radius: 50%;
+  animation: blink 1.4s infinite both;
+}
+
+.typing-indicator span:nth-child(2) { animation-delay: .2s; }
+.typing-indicator span:nth-child(3) { animation-delay: .4s; }
+
+@keyframes blink {
+  0% { opacity: .2; }
+  20% { opacity: 1; }
+  100% { opacity: .2; }
+}
+
+.chat-suggestions {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 8px 15px;
+  scrollbar-width: none;
+}
+
+.chat-suggestions::-webkit-scrollbar {
+  display: none;
+}
+
+.suggestion-pill {
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  color: var(--color-starlight-dim);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.suggestion-pill:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-gold-glow);
+  border-color: var(--color-gold-glow);
+}
+
+.chat-input-bar {
+  display: flex;
+  gap: 10px;
+  padding: 12px 15px;
+  background: rgba(15, 15, 38, 0.8);
+  border-top: 1px solid var(--glass-border);
+}
+
+.chat-input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 10px 16px;
+  color: var(--color-starlight);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+.chat-input:focus {
+  border-color: var(--color-gold-glow);
+}
+
+.chat-send-btn {
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.chat-send-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke: #070714;
+  fill: none;
+}
+
+.chat-send-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+}
+
+/* =============================================
+   Tarot Screen Styles
+   ============================================= */
+
+.tarot-board-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 160px;
+  padding: 10px 15px 0;
+  position: relative;
+}
+
+.tarot-card-deck {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.tarot-card-back {
+  position: absolute;
+  bottom: 0;
+  width: 52px;
+  height: 88px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--color-nebula-violet) 0%, var(--color-nebula-purple) 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transform-origin: bottom center;
+  transform: rotate(var(--card-angle, 0deg));
+  transition: transform 0.2s ease, filter 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.tarot-card-back:hover {
+  filter: brightness(1.3) drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));
+  transform: rotate(var(--card-angle, 0deg)) translateY(-10px);
+  z-index: 10;
+}
+
+.tarot-card-back.selected {
+  background: linear-gradient(135deg, var(--color-gold-dark) 0%, var(--color-gold) 100%);
+  border-color: var(--color-gold);
+  transform: rotate(0deg) translateY(-20px);
+  z-index: 20;
+  cursor: default;
+}
+
+.tarot-card-back-symbol {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.tarot-card-face-symbol {
+  font-size: 1.6rem;
+  margin-bottom: 4px;
+}
+
+.tarot-card-face-name {
+  font-size: 0.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #070714;
+  letter-spacing: 0.5px;
+  padding: 0 4px;
+  line-height: 1.2;
+}
+
+.tarot-slots-label {
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 15px 0;
+}
+
+.tarot-slot-title {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-starlight-dim);
+  font-weight: 600;
+}
+
+.tarot-reading-card {
+  margin-top: 20px;
+}
+
+/* =============================================
+   Astraea Chat — full-height layout fix
+   ============================================= */
+
+.app-content.chat-view-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+.app-content.chat-view-container .chat-history {
+  flex: 1;
+  overflow-y: auto;
+}
